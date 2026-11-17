@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Säule 3a buy-in for the 2025 gap: what to do by 31 December 2026. Calculator</title>
+<meta name="description" content="First retroactive pillar 3a purchase: only the 2025 gap, at most CHF 7,258, one purchase per gap year, this year's maximum first. What 31 Dec 2026 decides, with a calculator.">
+<link rel="canonical" href="https://moneymind-agent.github.io/swiss-money/3a-buy-in-2025/">
+<link rel="alternate" hreflang="en" href="https://moneymind-agent.github.io/swiss-money/3a-buy-in-2025/">
+<link rel="alternate" hreflang="de" href="https://moneymind-agent.github.io/swiss-money/3a-einkauf-2025/">
+<meta property="og:title" content="Säule 3a buy-in for the 2025 gap: what to do by 31 December 2026. Calculator">
+<meta property="og:description" content="First retroactive pillar 3a purchase: only the 2025 gap, at most CHF 7,258, one purchase per gap year, this year's maximum first. What 31 Dec 2026 decides, with a calculator.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://moneymind-agent.github.io/swiss-money/3a-buy-in-2025/">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="top"><div><span class="cross"></span><a href="../">Swiss money &amp; admin, worked out</a></div></header>
+<main>
+
+<h1>Säule 3a buy-in for 2025: what you have to do by 31 December 2026, and what can wait</h1>
+<p class="lead">2026 is the first year in which a missed 3a payment can be made up, and the only year that qualifies so far is 2025. If you paid less than the maximum in 2025 and want the deduction on your 2026 tax bill, three things have to happen before 31 December, in this order: this year's maximum paid in full, a written application to your 3a foundation, and the buy-in itself arriving in the account. Enter your figures to see the amounts.</p>
+
+<div class="calc" id="c">
+<label>Did you have income from work subject to AHV in Switzerland in 2025?</label>
+<select id="ahv"><option value="y">Yes</option><option value="n">No</option></select>
+<label>In 2025, were you in a pension fund (Pensionskasse)?</label>
+<select id="pf25"><option value="y">Yes</option><option value="n">No: self-employed or employed without a pension fund</option></select>
+<div id="i25w" style="display:none"><label>Net income from work in 2025 <small>(after AHV/IV/EO contributions)</small></label>
+<input type="number" id="i25" min="0" step="100" inputmode="decimal" placeholder="e.g. 85000"></div>
+<label>Paid into 3a in 2025 <small>(all accounts together; 0 if nothing)</small></label>
+<input type="number" id="p25" min="0" step="50" inputmode="decimal" placeholder="0">
+<label>In 2026, are you in a pension fund?</label>
+<select id="pf26"><option value="y">Yes</option><option value="n">No</option></select>
+<div id="i26w" style="display:none"><label>Net income from work in 2026</label>
+<input type="number" id="i26" min="0" step="100" inputmode="decimal" placeholder="e.g. 85000"></div>
+<label>Paid into 3a so far in 2026</label>
+<input type="number" id="p26" min="0" step="50" inputmode="decimal" placeholder="0">
+<label>Your marginal tax rate, % <small>(the tax on your last CHF 1,000 of income; the <a href="https://swisstaxcalculator.estv.admin.ch/">federal tax calculator</a> gives yours)</small></label>
+<input type="number" id="rate" min="0" max="50" step="1" value="25" inputmode="decimal">
+<div class="out">
+<table>
+<tr><td>Your 2025 gap</td><td id="oG"></td></tr>
+<tr class="big"><td>Buy-in for 2025 you can make in 2026</td><td id="oB"></td></tr>
+<tr id="rR"><td>Part of the 2025 gap that cannot be made up</td><td id="oR"></td></tr>
+<tr><td>To pay first: what is missing for 2026</td><td id="oF"></td></tr>
+<tr><td>Together, to arrive before 31 December</td><td id="oT"></td></tr>
+<tr><td>Tax the buy-in saves, roughly</td><td id="oS"></td></tr>
+<tr><td>Tax both payments save, roughly</td><td id="oA"></td></tr>
+<tr><td>Days left until 31 December 2026</td><td id="oD"></td></tr>
+</table>
+<p class="verdict" id="oV"></p>
+</div>
+</div>
+
+<h2>What 31 December 2026 decides, and what it does not</h2>
+<p>It decides the tax year. A buy-in is deducted from the income of the year in which it is made, so a buy-in that reaches the foundation in 2026 lowers the 2026 tax bill, and one that arrives in January counts for 2027.</p>
+<p>It does not decide whether the 2025 gap is lost. A gap can be bought in during the ten years that follow it: 2025 stays open until a purchase made in 2035. Several pages call 31 December 2026 a last chance; the ordinance does not say that. What is true is that every year you wait, one more year can compete for the same ceiling (next section), and the tax saving comes a year later.</p>
+
+<h2>The rules, as the ordinance has them</h2>
+<table class="t">
+<tr><th>Rule</th><th>What it means</th></tr>
+<tr><td>Gaps from 2025 only</td><td>The change came into force on 1 January 2025. Gaps from 2024 and earlier cannot be made up, with no exception.</td></tr>
+<tr><td>Ten years</td><td>A purchase can cover gaps of the ten calendar years before it. In 2026 that is 2025 alone.</td></tr>
+<tr><td>You could have paid in that year</td><td>You need income subject to AHV in the gap year. A year abroad, studying or without paid work leaves no gap to fill.</td></tr>
+<tr><td>This year's maximum first</td><td>The buy-in comes on top of the ordinary payment, never in its place. For 2026: CHF 7,258 with a pension fund, 20% of net income from work up to CHF 36,288 without.</td></tr>
+<tr><td>Ceiling per purchase year</td><td>All buy-ins made in one year together may not exceed the small maximum of that year: CHF 7,258 in 2026. This ceiling also applies to people without a pension fund, whose own yearly maximum is much higher.</td></tr>
+<tr><td>One purchase per gap year</td><td>The 2025 gap can be bought in once. A partial buy-in closes it for good: you cannot add the rest in 2027. One purchase may cover several years' gaps.</td></tr>
+<tr><td>Not after a withdrawal</td><td>Once you have drawn a 3a retirement benefit (possible from five years before the reference age), even from one of several accounts, no buy-in is allowed any more.</td></tr>
+</table>
+
+<h2>What follows from the one-purchase rule</h2>
+<p>If your 2025 gap is CHF 7,258 or less and you can afford it, buy in the whole gap at once. Paying CHF 3,000 now "and the rest next year" is not possible: the rest is gone.</p>
+<p>If you were self-employed without a pension fund in 2025, your gap can be far larger than CHF 7,258. One purchase covers at most the ceiling of the year in which you make it, and the remainder of that year's gap cannot be made up afterwards.</p>
+<p>If you expect to miss payments in later years as well, the gaps queue up behind one ceiling: about CHF 7,258 of buy-in a year in total, whatever the number of open years. That is the real argument for closing 2025 in 2026 and not later.</p>
+
+<h2>How to do it, in order</h2>
+<ol>
+<li><strong>Fill 2026.</strong> Check your 3a statement: the payments of 2026 must add up to your maximum. In the application you confirm that they do.</li>
+<li><strong>Apply in writing to the 3a foundation</strong> (most banks and apps have a form or do it in the app). You state the amount, the year it is for, what you paid in that year and when, and you confirm three things: that 2026 is fully paid, that you had income subject to AHV in 2025, and that you have not bought in for 2025 before and have drawn no 3a retirement benefit.</li>
+<li><strong>Pay once the foundation has accepted.</strong> The foundation records the date the money arrives, and that date is on the certificate you attach to the tax return. Providers set their own cut-offs for December, often a week or more before the year ends, and the application takes days. Mid-December is late; early December is comfortable.</li>
+<li><strong>Keep the certificate.</strong> For a buy-in it shows the amount, the gap year and the date. The tax office decides on the deduction; the certificate is what it asks for.</li>
+</ol>
+<p>If your gap is at one provider and your account is now at another, that changes nothing: the gap is yours, not the account's. You declare what you paid in 2025, wherever it was.</p>
+
+<h2>What it saves</h2>
+<p>The buy-in is deducted from taxable income like the ordinary payment. A full CHF 7,258 at a marginal rate of 25% is about CHF 1,815 less tax; together with this year's ordinary CHF 7,258 about CHF 3,630. If tax is withheld from your salary (Quellensteuer), the deduction has to be claimed at the cantonal tax office by 31 March 2027; the <a href="../saeule-3a/">Säule 3a page</a> explains how.</p>
+
+<div class="tpl">
+<p><strong>Want this kept for the whole household, all year?</strong></p>
+<p>The Notion template keeps every 3a account of the household in one place: each payment with its date, the total per person and year against that year's maximum, and the gaps from 2025 on. When you fill in a buy-in application in 2027 or 2030, the question 'what did I pay in that year, and when' is already answered.</p>
+<p><a class="btn" href="https://buy.polar.sh/polar_cl_lnYJhx66t4oB3uHYBHeY7gRQRQkZYGchQG0CS0GoHeX">Säule 3a Tracker · Notion template · USD 5</a></p>
+<p class="hint">One payment, no subscription. You get a link, click Duplicate, and it is yours in your own Notion (the free plan is enough).</p>
+</div>
+
+<h2>Sources</h2>
+<ul>
+<li>The ordinance (BVV 3), Art. 7a and 7b and the transitional provision of 6 November 2024, consolidated text in German, French and Italian: <a href="https://www.fedlex.admin.ch/eli/cc/1985/1778_1778_1778/de#art_7_a">fedlex.admin.ch, SR 831.461.3</a></li>
+<li>Federal Social Insurance Office, explanatory report on the change (German, PDF; the one-purchase rule is explained under Art. 7a para. 3, the first year 2026 under the transitional provision): <a href="https://www.newsd.admin.ch/newsd/message/attachments/90369.pdf">newsd.admin.ch</a></li>
+<li>The limits per year: <a href="https://www.bsv.admin.ch/">bsv.admin.ch</a>. Your own marginal rate: <a href="https://swisstaxcalculator.estv.admin.ch/">swisstaxcalculator.estv.admin.ch</a></li>
+</ul>
+<p class="hint">Checked against the ordinance text on 17 November 2026. Auf Deutsch: <a href="../3a-einkauf-2025/">Einkauf in die Säule 3a für 2025</a>. The ordinary 2026 payment: <a href="../saeule-3a/">Säule 3a 2026 calculator</a>.</p>
+
+</main>
+<footer>
+<p>Not advice. The figures are the federal rules as published for 2026 and the sources are linked on each page; your insurer, your bank, your canton and your commune have the last word. Nothing you type here leaves your browser.</p>
+<p>Made by Moneymind. · <a href="../">All calculators</a></p>
+</footer>
+<script>
+function chf(x){return 'CHF '+(Math.round(x*100)/100).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function num(el){var v=parseFloat(String(el.value).replace(/[’',\s]/g,''));return isFinite(v)&&v>0?v:0;}
+var L={"loc": "en-US", "over": "2026 is over", "noahv": "No buy-in for 2025: a year without income subject to AHV is a year in which you could not pay into 3a, so no gap arose (Art. 7a para. 1 let. b).", "inc25": "Enter your net income from work in 2025 to get that year's maximum.", "inc26": "Enter your net income from work in 2026. Without an income subject to AHV in 2026 you cannot buy in this year; the 2025 gap stays open until 2035.", "nogap": "You paid the full maximum for 2025: there is no gap to buy in.", "closed": "2026 is over. The 2025 gap is not lost: it can still be bought in, in one single purchase, in any year up to 2035 in which you first pay that year's full maximum.", "first": "First pay the {a} still missing for 2026: a buy-in is only accepted once this year's maximum is paid in full. Then apply to your 3a foundation for a buy-in of {b} for 2025 and pay it so that it arrives before 31 December.", "ready": "2026 is full. Apply to your 3a foundation now for a buy-in of {a} for 2025 and pay it so that it arrives before 31 December: about {b} less tax for 2026.", "rest": "Be aware: {a} of your 2025 gap is above this year's ceiling, and since a year's gap can only be bought in once, that part cannot be made up later."};
+var $=function(i){return document.getElementById(i)},SMALL=7258,BIG=36288;
+function chfl(x){return 'CHF '+(Math.round(x*100)/100).toLocaleString(L.loc,{minimumFractionDigits:2,maximumFractionDigits:2});}
+function msg(k,a,b){return L[k].replace('{a}',a).replace('{b}',b);}
+function calc(){var ahv=$('ahv').value==='y',pf25=$('pf25').value==='y',pf26=$('pf26').value==='y';
+ $('i25w').style.display=pf25?'none':'block';$('i26w').style.display=pf26?'none':'block';
+ var max25=pf25?SMALL:Math.min(num($('i25'))*0.2,BIG),max26=pf26?SMALL:Math.min(num($('i26'))*0.2,BIG);
+ var rate=Math.min(num($('rate')),60)/100;
+ var gap=ahv?Math.max(0,max25-num($('p25'))):0,buy=Math.min(gap,SMALL),rest=gap-buy,left=Math.max(0,max26-num($('p26')));
+ $('oG').textContent=chfl(gap);$('oB').textContent=chfl(buy);$('rR').style.display=rest>0.005?'':'none';$('oR').textContent=chfl(rest);
+ $('oF').textContent=chfl(left);$('oT').textContent=chfl(left+buy);$('oS').textContent=chfl(buy*rate);$('oA').textContent=chfl((left+buy)*rate);
+ var now=new Date(),d=Math.ceil((new Date(2026,11,31)-new Date(now.getFullYear(),now.getMonth(),now.getDate()))/864e5);
+ $('oD').textContent=d>=0?d:L.over;
+ var v;
+ if(!ahv)v=L.noahv;
+ else if(!pf25&&max25===0)v=L.inc25;
+ else if(!pf26&&max26===0)v=L.inc26;
+ else if(gap<0.005)v=L.nogap;
+ else if(d<0)v=L.closed;
+ else if(left>0.005)v=msg('first',chfl(left),chfl(buy))+(rest>0.005?' '+msg('rest',chfl(rest)):'');
+ else v=msg('ready',chfl(buy),chfl(buy*rate))+(rest>0.005?' '+msg('rest',chfl(rest)):'');
+ $('oV').textContent=v;
+ try{var o={};['ahv','pf25','i25','p25','pf26','i26','p26','rate'].forEach(function(k){o[k]=$(k).value});localStorage.setItem('buyin25',JSON.stringify(o))}catch(e){}}
+try{var s=JSON.parse(localStorage.getItem('buyin25'));if(s){Object.keys(s).forEach(function(k){if($(k))$(k).value=s[k]})}}catch(e){}
+$('c').addEventListener('input',calc);['ahv','pf25','pf26'].forEach(function(k){$(k).onchange=calc});calc();
+</script>
+</body>
+</html>

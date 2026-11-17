@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Säule 3a Einkauf für die Lücke 2025: was bis 31. Dezember 2026 zu tun ist. Rechner</title>
+<meta name="description" content="Erster nachträglicher Einkauf in die Säule 3a: nur die Lücke 2025, höchstens 7258 Franken, ein Einkauf pro Lückenjahr, zuerst das Maximum 2026. Mit Rechner und Quellen.">
+<link rel="canonical" href="https://moneymind-agent.github.io/swiss-money/3a-einkauf-2025/">
+<link rel="alternate" hreflang="en" href="https://moneymind-agent.github.io/swiss-money/3a-buy-in-2025/">
+<link rel="alternate" hreflang="de" href="https://moneymind-agent.github.io/swiss-money/3a-einkauf-2025/">
+<meta property="og:title" content="Säule 3a Einkauf für die Lücke 2025: was bis 31. Dezember 2026 zu tun ist. Rechner">
+<meta property="og:description" content="Erster nachträglicher Einkauf in die Säule 3a: nur die Lücke 2025, höchstens 7258 Franken, ein Einkauf pro Lückenjahr, zuerst das Maximum 2026. Mit Rechner und Quellen.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://moneymind-agent.github.io/swiss-money/3a-einkauf-2025/">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="top"><div><span class="cross"></span><a href="../">Schweizer Geld &amp; Papierkram, durchgerechnet</a></div></header>
+<main>
+
+<h1>Säule 3a: Einkauf für die Lücke 2025. Was bis 31. Dezember 2026 erledigt sein muss und was warten kann</h1>
+<p class="lead">2026 ist das erste Jahr, in dem sich eine verpasste 3a-Einzahlung nachholen lässt, und das einzige Jahr, das bisher zählt, ist 2025. Wer 2025 weniger als das Maximum einbezahlt hat und den Abzug in der Steuererklärung 2026 will, muss vor dem 31. Dezember drei Dinge erledigen, und zwar in dieser Reihenfolge: das Maximum 2026 voll einzahlen, den Einkauf bei der 3a-Stiftung schriftlich beantragen, den Einkauf überweisen. Der Rechner zeigt Ihre Beträge.</p>
+
+<div class="calc" id="c">
+<label>Hatten Sie 2025 ein AHV-pflichtiges Erwerbseinkommen in der Schweiz?</label>
+<select id="ahv"><option value="y">Ja</option><option value="n">Nein</option></select>
+<label>Waren Sie 2025 einer Pensionskasse angeschlossen?</label>
+<select id="pf25"><option value="y">Ja</option><option value="n">Nein: selbständig oder angestellt ohne Pensionskasse</option></select>
+<div id="i25w" style="display:none"><label>Nettoerwerbseinkommen 2025 <small>(nach Abzug der AHV/IV/EO-Beiträge)</small></label>
+<input type="number" id="i25" min="0" step="100" inputmode="decimal" placeholder="z. B. 85000"></div>
+<label>2025 in die Säule 3a einbezahlt <small>(alle Konten zusammen; 0, wenn nichts)</small></label>
+<input type="number" id="p25" min="0" step="50" inputmode="decimal" placeholder="0">
+<label>Sind Sie 2026 einer Pensionskasse angeschlossen?</label>
+<select id="pf26"><option value="y">Ja</option><option value="n">Nein</option></select>
+<div id="i26w" style="display:none"><label>Nettoerwerbseinkommen 2026</label>
+<input type="number" id="i26" min="0" step="100" inputmode="decimal" placeholder="z. B. 85000"></div>
+<label>2026 bisher in die Säule 3a einbezahlt</label>
+<input type="number" id="p26" min="0" step="50" inputmode="decimal" placeholder="0">
+<label>Ihr Grenzsteuersatz in % <small>(die Steuer auf den letzten 1000 Franken Einkommen; der <a href="https://swisstaxcalculator.estv.admin.ch/">Steuerrechner des Bundes</a> zeigt Ihren)</small></label>
+<input type="number" id="rate" min="0" max="50" step="1" value="25" inputmode="decimal">
+<div class="out">
+<table>
+<tr><td>Ihre Beitragslücke 2025</td><td id="oG"></td></tr>
+<tr class="big"><td>Einkauf für 2025, der 2026 möglich ist</td><td id="oB"></td></tr>
+<tr id="rR"><td>Teil der Lücke 2025, der sich nicht nachholen lässt</td><td id="oR"></td></tr>
+<tr><td>Zuerst einzuzahlen: was für 2026 noch fehlt</td><td id="oF"></td></tr>
+<tr><td>Zusammen, Eingang vor dem 31. Dezember</td><td id="oT"></td></tr>
+<tr><td>Steuerersparnis durch den Einkauf, ungefähr</td><td id="oS"></td></tr>
+<tr><td>Steuerersparnis durch beide Zahlungen, ungefähr</td><td id="oA"></td></tr>
+<tr><td>Tage bis zum 31. Dezember 2026</td><td id="oD"></td></tr>
+</table>
+<p class="verdict" id="oV"></p>
+</div>
+</div>
+
+<h2>Was der 31. Dezember 2026 entscheidet und was nicht</h2>
+<p>Er entscheidet über das Steuerjahr. Ein Einkauf wird vom Einkommen des Jahres abgezogen, in dem er erfolgt. Trifft er 2026 bei der Stiftung ein, senkt er die Steuern 2026; trifft er im Januar ein, zählt er für 2027.</p>
+<p>Er entscheidet nicht darüber, ob die Lücke 2025 verfällt. Eine Lücke lässt sich in den zehn Jahren danach schliessen: 2025 bleibt bis zu einem Einkauf im Jahr 2035 offen. Manche Ratgeber nennen den 31. Dezember 2026 eine letzte Chance; in der Verordnung steht das nicht. Richtig ist: Mit jedem Jahr, das Sie warten, kann ein weiteres Lückenjahr dazukommen, das sich dieselbe Obergrenze teilen muss (nächster Abschnitt), und die Steuerersparnis kommt ein Jahr später.</p>
+
+<h2>Die Regeln, wie sie in der BVV 3 stehen</h2>
+<table class="t">
+<tr><th>Regel</th><th>Was sie bedeutet</th></tr>
+<tr><td>Nur Lücken ab 2025</td><td>Die Änderung gilt seit dem 1. Januar 2025. Lücken aus 2024 und früher lassen sich nicht nachholen, ohne Ausnahme.</td></tr>
+<tr><td>Zehn Jahre</td><td>Ein Einkauf kann Lücken der zehn vorangehenden Kalenderjahre decken. 2026 ist das allein das Jahr 2025.</td></tr>
+<tr><td>Beitragsberechtigt im Lückenjahr</td><td>Sie brauchen im Lückenjahr ein AHV-pflichtiges Einkommen. Ein Jahr im Ausland, im Studium oder ohne Erwerbsarbeit hinterlässt keine Lücke, die sich füllen liesse.</td></tr>
+<tr><td>Zuerst das laufende Jahr</td><td>Der Einkauf kommt zum ordentlichen Beitrag hinzu, nie an dessen Stelle. Für 2026: 7258 Franken mit Pensionskasse, 20 Prozent des Nettoerwerbseinkommens bis höchstens 36&nbsp;288 Franken ohne.</td></tr>
+<tr><td>Obergrenze pro Einkaufsjahr</td><td>Alle Einkäufe eines Jahres zusammen dürfen den «kleinen Beitrag» dieses Jahres nicht übersteigen: 7258 Franken im Jahr 2026. Das gilt auch für Personen ohne Pensionskasse, deren eigenes Jahresmaximum viel höher liegt.</td></tr>
+<tr><td>Ein Einkauf pro Lückenjahr</td><td>Die Lücke 2025 darf nur mit einem einzigen Einkauf ausgeglichen werden. Ein Teileinkauf schliesst sie endgültig: Den Rest können Sie 2027 nicht nachschieben. Ein Einkauf darf dagegen mehrere Lückenjahre decken.</td></tr>
+<tr><td>Nicht nach einem Bezug</td><td>Sobald Sie eine Altersleistung aus der Säule 3a bezogen haben (möglich ab fünf Jahren vor dem Referenzalter), auch nur von einem von mehreren Konten, ist kein Einkauf mehr zulässig.</td></tr>
+</table>
+
+<h2>Was aus der Ein-Einkauf-Regel folgt</h2>
+<p>Beträgt Ihre Lücke 2025 höchstens 7258 Franken und können Sie es sich leisten, kaufen Sie die ganze Lücke auf einmal ein. «Jetzt 3000 Franken und den Rest nächstes Jahr» geht nicht: Der Rest ist weg.</p>
+<p>Waren Sie 2025 selbständig ohne Pensionskasse, kann Ihre Lücke weit über 7258 Franken liegen. Ein Einkauf deckt höchstens die Obergrenze des Jahres, in dem Sie ihn tätigen; der Rest der Lücke jenes Jahres lässt sich danach nicht mehr ausgleichen.</p>
+<p>Rechnen Sie damit, auch in späteren Jahren nicht voll einzuzahlen, dann stauen sich die Lücken hinter einer einzigen Obergrenze: insgesamt rund 7258 Franken Einkauf pro Jahr, egal wie viele Jahre offen sind. Das ist der eigentliche Grund, 2025 schon 2026 zu schliessen und nicht später.</p>
+
+<h2>So gehen Sie vor</h2>
+<ol>
+<li><strong>2026 füllen.</strong> Prüfen Sie den 3a-Auszug: Die Einzahlungen 2026 müssen Ihr Maximum ergeben. Im Antrag bestätigen Sie das.</li>
+<li><strong>Einkauf schriftlich bei der 3a-Stiftung beantragen</strong> (die meisten Banken und Apps haben ein Formular oder lösen es in der App). Sie geben den Betrag an, das Jahr der Lücke, was Sie in jenem Jahr wann einbezahlt haben, und Sie bestätigen: dass 2026 voll einbezahlt ist, dass Sie 2025 ein AHV-pflichtiges Einkommen hatten, dass Sie für 2025 noch keinen Einkauf gemacht und noch keine Altersleistung aus der Säule 3a bezogen haben.</li>
+<li><strong>Überweisen, sobald die Stiftung zugestimmt hat.</strong> Die Stiftung hält das Datum des Zahlungseingangs fest, und dieses Datum steht auf der Bescheinigung für die Steuererklärung. Die Anbieter setzen für den Dezember eigene Annahmeschlüsse, oft eine Woche oder mehr vor Jahresende, und der Antrag braucht Tage. Mitte Dezember ist spät, Anfang Dezember bequem.</li>
+<li><strong>Bescheinigung aufbewahren.</strong> Beim Einkauf nennt sie Betrag, Lückenjahr und Datum. Über den Abzug entscheidet das Steueramt; die Bescheinigung ist das, was es verlangt.</li>
+</ol>
+<p>Liegt Ihr Konto heute bei einem anderen Anbieter als 2025, ändert das nichts: Die Lücke gehört zu Ihnen, nicht zum Konto. Sie deklarieren, was Sie 2025 einbezahlt haben, egal wo.</p>
+
+<h2>Was es bringt</h2>
+<p>Der Einkauf wird wie der ordentliche Beitrag vom steuerbaren Einkommen abgezogen. Volle 7258 Franken bei einem Grenzsteuersatz von 25 Prozent sind rund 1815 Franken weniger Steuern; zusammen mit dem ordentlichen Beitrag 2026 rund 3630 Franken. Wer an der Quelle besteuert wird, muss den Abzug bis 31. März 2027 beim kantonalen Steueramt beantragen.</p>
+
+<div class="tpl">
+<p><strong>Alle 3a-Konten des Haushalts an einem Ort, das ganze Jahr?</strong></p>
+<p>Die Notion-Vorlage (auf Englisch) führt jede Einzahlung mit Datum, die Summe pro Person und Jahr gegen das Maximum des Jahres und die Lücken ab 2025. Wenn Sie 2027 oder 2030 einen Einkauf beantragen, ist die Frage «Was habe ich in jenem Jahr wann einbezahlt?» schon beantwortet.</p>
+<p><a class="btn" href="https://buy.polar.sh/polar_cl_lnYJhx66t4oB3uHYBHeY7gRQRQkZYGchQG0CS0GoHeX">Säule 3a Tracker · Notion-Vorlage · USD 5</a></p>
+<p class="hint">Einmal bezahlen, kein Abo. Sie erhalten einen Link, klicken auf «Duplicate», und die Vorlage liegt in Ihrem eigenen Notion (der Gratis-Plan genügt).</p>
+</div>
+
+<h2>Quellen</h2>
+<ul>
+<li>BVV 3, Art. 7a und 7b sowie die Übergangsbestimmung zur Änderung vom 6. November 2024: <a href="https://www.fedlex.admin.ch/eli/cc/1985/1778_1778_1778/de#art_7_a">fedlex.admin.ch, SR 831.461.3</a></li>
+<li>Bundesamt für Sozialversicherungen, Erläuternder Bericht zur Änderung (PDF; die Ein-Einkauf-Regel unter Art. 7a Abs. 3, das erste Einkaufsjahr 2026 unter den Übergangsbestimmungen): <a href="https://www.newsd.admin.ch/newsd/message/attachments/90369.pdf">newsd.admin.ch</a></li>
+<li>Die Grenzbeträge pro Jahr: <a href="https://www.bsv.admin.ch/">bsv.admin.ch</a>. Ihr Grenzsteuersatz: <a href="https://swisstaxcalculator.estv.admin.ch/">swisstaxcalculator.estv.admin.ch</a></li>
+</ul>
+<p class="hint">Am 17. November 2026 mit dem Verordnungstext abgeglichen. In English: <a href="../3a-buy-in-2025/">3a buy-in for the 2025 gap</a>.</p>
+
+</main>
+<footer>
+<p>Keine Beratung. Die Zahlen sind die Regeln des Bundes, wie sie für 2026 veröffentlicht sind, die Quellen sind auf jeder Seite verlinkt; das letzte Wort haben Ihre Vorsorgestiftung, Ihre Bank, Ihr Kanton und Ihre Gemeinde. Was Sie hier eingeben, verlässt Ihren Browser nicht.</p>
+<p>Made by Moneymind. · <a href="../">Alle Rechner (englisch)</a></p>
+</footer>
+<script>
+function chf(x){return 'CHF '+(Math.round(x*100)/100).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function num(el){var v=parseFloat(String(el.value).replace(/[’',\s]/g,''));return isFinite(v)&&v>0?v:0;}
+var L={"loc": "de-CH", "over": "2026 ist vorbei", "noahv": "Kein Einkauf für 2025: Ohne AHV-pflichtiges Einkommen durften Sie in jenem Jahr nicht in die Säule 3a einzahlen, also ist auch keine Lücke entstanden (Art. 7a Abs. 1 Bst. b BVV 3).", "inc25": "Geben Sie Ihr Nettoerwerbseinkommen 2025 ein, um das Maximum jenes Jahres zu erhalten.", "inc26": "Geben Sie Ihr Nettoerwerbseinkommen 2026 ein. Ohne AHV-pflichtiges Einkommen im Jahr 2026 ist dieses Jahr kein Einkauf möglich; die Lücke 2025 bleibt bis 2035 offen.", "nogap": "Sie haben 2025 das Maximum einbezahlt: Es gibt keine Lücke, die Sie einkaufen könnten.", "closed": "2026 ist vorbei. Die Lücke 2025 ist nicht verloren: Sie lässt sich weiterhin mit einem einzigen Einkauf schliessen, in jedem Jahr bis 2035, in dem Sie zuerst das volle Maximum des Jahres einzahlen.", "first": "Zahlen Sie zuerst die {a} ein, die für 2026 noch fehlen: Ein Einkauf wird nur angenommen, wenn das Maximum des laufenden Jahres voll einbezahlt ist. Beantragen Sie danach bei Ihrer 3a-Stiftung den Einkauf von {b} für 2025 und überweisen Sie ihn so, dass er vor dem 31. Dezember eintrifft.", "ready": "2026 ist voll. Beantragen Sie jetzt bei Ihrer 3a-Stiftung den Einkauf von {a} für 2025 und überweisen Sie ihn so, dass er vor dem 31. Dezember eintrifft: rund {b} weniger Steuern für 2026.", "rest": "Achtung: {a} Ihrer Lücke 2025 liegen über der Obergrenze dieses Jahres. Weil die Lücke eines Jahres nur mit einem einzigen Einkauf geschlossen werden darf, lässt sich dieser Teil später nicht mehr nachholen."};
+var $=function(i){return document.getElementById(i)},SMALL=7258,BIG=36288;
+function chfl(x){return 'CHF '+(Math.round(x*100)/100).toLocaleString(L.loc,{minimumFractionDigits:2,maximumFractionDigits:2});}
+function msg(k,a,b){return L[k].replace('{a}',a).replace('{b}',b);}
+function calc(){var ahv=$('ahv').value==='y',pf25=$('pf25').value==='y',pf26=$('pf26').value==='y';
+ $('i25w').style.display=pf25?'none':'block';$('i26w').style.display=pf26?'none':'block';
+ var max25=pf25?SMALL:Math.min(num($('i25'))*0.2,BIG),max26=pf26?SMALL:Math.min(num($('i26'))*0.2,BIG);
+ var rate=Math.min(num($('rate')),60)/100;
+ var gap=ahv?Math.max(0,max25-num($('p25'))):0,buy=Math.min(gap,SMALL),rest=gap-buy,left=Math.max(0,max26-num($('p26')));
+ $('oG').textContent=chfl(gap);$('oB').textContent=chfl(buy);$('rR').style.display=rest>0.005?'':'none';$('oR').textContent=chfl(rest);
+ $('oF').textContent=chfl(left);$('oT').textContent=chfl(left+buy);$('oS').textContent=chfl(buy*rate);$('oA').textContent=chfl((left+buy)*rate);
+ var now=new Date(),d=Math.ceil((new Date(2026,11,31)-new Date(now.getFullYear(),now.getMonth(),now.getDate()))/864e5);
+ $('oD').textContent=d>=0?d:L.over;
+ var v;
+ if(!ahv)v=L.noahv;
+ else if(!pf25&&max25===0)v=L.inc25;
+ else if(!pf26&&max26===0)v=L.inc26;
+ else if(gap<0.005)v=L.nogap;
+ else if(d<0)v=L.closed;
+ else if(left>0.005)v=msg('first',chfl(left),chfl(buy))+(rest>0.005?' '+msg('rest',chfl(rest)):'');
+ else v=msg('ready',chfl(buy),chfl(buy*rate))+(rest>0.005?' '+msg('rest',chfl(rest)):'');
+ $('oV').textContent=v;
+ try{var o={};['ahv','pf25','i25','p25','pf26','i26','p26','rate'].forEach(function(k){o[k]=$(k).value});localStorage.setItem('buyin25',JSON.stringify(o))}catch(e){}}
+try{var s=JSON.parse(localStorage.getItem('buyin25'));if(s){Object.keys(s).forEach(function(k){if($(k))$(k).value=s[k]})}}catch(e){}
+$('c').addEventListener('input',calc);['ahv','pf25','pf26'].forEach(function(k){$(k).onchange=calc});calc();
+</script>
+</body>
+</html>
