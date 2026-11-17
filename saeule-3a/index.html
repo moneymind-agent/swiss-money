@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Säule 3a 2026: how much can I still pay in, and what does it save? Calculator</title>
+<meta name="description" content="Pillar 3a in 2026: CHF 7,258 with a pension fund, 20% of net income up to CHF 36,288 without. Enter what you have paid and see what is left before 31 December and the tax it saves.">
+<link rel="canonical" href="https://moneymind-agent.github.io/swiss-money/saeule-3a/">
+<meta property="og:title" content="Säule 3a 2026: how much can I still pay in, and what does it save? Calculator">
+<meta property="og:description" content="Pillar 3a in 2026: CHF 7,258 with a pension fund, 20% of net income up to CHF 36,288 without. Enter what you have paid and see what is left before 31 December and the tax it saves.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://moneymind-agent.github.io/swiss-money/saeule-3a/">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="top"><div><span class="cross"></span><a href="../">Swiss money &amp; admin, worked out</a></div></header>
+<main>
+
+<h1>Säule 3a 2026: how much can I still pay in, and what does it save?</h1>
+<p class="lead">The 3a deduction is the one tax saving almost everyone with a Swiss income can take, and it expires on 31 December: what you have not paid in by then is gone for this tax year. Enter what you have paid so far and see what is left, what it is worth in tax, and when the money has to leave your account.</p>
+
+<div class="calc" id="c">
+<label>Are you in a pension fund (Pensionskasse, 2nd pillar)?</label>
+<select id="pf"><option value="y">Yes: employed, with a pension fund deduction on the payslip</option><option value="n">No: self-employed or employed without a pension fund</option></select>
+<div id="incw" style="display:none"><label>Net income from work in 2026 <small>(after AHV/IV/EO contributions)</small></label>
+<input type="number" id="inc" min="0" step="100" inputmode="decimal" placeholder="e.g. 85000"></div>
+<label>Paid into 3a so far in 2026 <small>(all your 3a accounts together)</small></label>
+<input type="number" id="paid" min="0" step="50" inputmode="decimal" placeholder="0">
+<label>Your marginal tax rate, % <small>(the tax on your last CHF 1,000 of income: roughly 15 to 25 for middle incomes, 30 to 40 for high incomes in the cities; the <a href="https://swisstaxcalculator.estv.admin.ch/">federal tax calculator</a> gives yours)</small></label>
+<input type="number" id="rate" min="0" max="50" step="1" value="25" inputmode="decimal">
+<label>Paid into 3a in 2025 <small>(optional: leave empty to skip the buy-in for last year's gap)</small></label>
+<input type="number" id="p25" min="0" step="50" inputmode="decimal" placeholder="">
+<div class="out">
+<table>
+<tr><td>Your maximum for 2026</td><td id="oM"></td></tr>
+<tr class="big"><td>You can still pay in for 2026</td><td id="oL"></td></tr>
+<tr><td>Tax it saves, roughly</td><td id="oS"></td></tr>
+<tr><td>Tax saved by the whole 2026 amount, roughly</td><td id="oA"></td></tr>
+<tr id="rG"><td>On top: buy-in for the 2025 gap, possible once 2026 is full</td><td id="oG"></td></tr>
+<tr><td>Days left until 31 December 2026</td><td id="oD"></td></tr>
+</table>
+<p class="verdict" id="oV"></p>
+</div>
+</div>
+
+<h2>The figures for 2026</h2>
+<table class="t">
+<tr><th>Your situation</th><th>Maximum 3a payment in 2026</th></tr>
+<tr><td>With a pension fund</td><td>CHF 7,258</td></tr>
+<tr><td>Without a pension fund</td><td>20% of net income from work, at most CHF 36,288</td></tr>
+</table>
+<p>The amounts are per person, not per household: a couple who both work can each pay in the maximum. You need an income from work that is subject to AHV; a year without one is a year without 3a. The maximum is the same whether you work full time or part time, and you can spread it over several 3a accounts as long as the total stays under the limit.</p>
+
+<h2>What it saves</h2>
+<p>The payment is deducted from your taxable income, so the saving is the payment multiplied by your marginal tax rate. CHF 7,258 at a marginal rate of 25% is about CHF 1,815 less tax; at 35% about CHF 2,540. The money is not a gift: it is locked until five years before the ordinary retirement age (earlier for buying a home you live in, going self-employed or leaving Switzerland for good), and it is taxed once when you withdraw it, at a reduced rate and separately from your other income.</p>
+
+<h2>When the money has to leave your account</h2>
+<p>What counts is the day the payment arrives in the 3a account, not the day you send it. It has to be booked in 2026. Banks and 3a apps publish a cut-off for year-end payments, usually a few working days before Christmas, and a payment that arrives in January counts for 2027. Send it by mid-December and check a few days later that it is on the 3a statement. If you pay monthly by standing order, check that the twelve payments really add up to the maximum: after the limit was raised, many old standing orders still run on the earlier amount (CHF 588 a month gave the 2024 limit of 7,056; CHF 604.83 gives 7,258).</p>
+
+<h2>New since 2026: paying in for a year you missed</h2>
+<p>Until now a missed year was lost. From 2026 you can make up gaps, but only gaps from 2025 onward, and with conditions: you had an AHV income in Switzerland in the year of the gap and have one now, you first pay this year's full maximum, and the buy-in for past years is limited to the small maximum (CHF 7,258) per year on top. A gap can be filled for up to ten years afterwards. The buy-in is deductible like the ordinary payment. Ask your 3a provider for its buy-in form: it wants a declaration of what you paid in the gap year.</p>
+
+<h2>If tax is withheld from your salary (Quellensteuer)</h2>
+<p>With a B or L permit and tax taken at source, the 3a deduction does not happen by itself. You get it by asking for an ordinary assessment or a correction of the withholding tax, at your cantonal tax office, by 31 March of the following year. That date is strict, and in most cantons a request for an ordinary assessment applies to the following years too. Above a gross salary of CHF 120,000 you are assessed ordinarily anyway.</p>
+
+<h2>Is one account enough?</h2>
+<p>A 3a account has to be withdrawn in one piece. Because the withdrawal tax rises with the amount, people who will have a larger balance open several accounts over the years (three to five is common) and withdraw them in different tax years. The yearly maximum stays the same however many accounts you have.</p>
+
+<div class="tpl">
+<p><strong>Want this kept for the whole household, all year?</strong></p>
+<p>The Notion template keeps every 3a account of the household in one place: each payment with its date, the total per person and year against that year's maximum, what is still open before 31 December, the tax saved at your rate, and the gaps from 2025 on that can be bought in later. It is the page to open in December, and again when you fill in the tax return.</p>
+<p><a class="btn" href="https://buy.polar.sh/polar_cl_lnYJhx66t4oB3uHYBHeY7gRQRQkZYGchQG0CS0GoHeX">Säule 3a Tracker · Notion template · USD 5</a></p>
+<p class="hint">One payment, no subscription. You get a link, click Duplicate, and it is yours in your own Notion (the free plan is enough).</p>
+</div>
+
+<h2>Sources</h2>
+<ul>
+<li>Federal Social Insurance Office (BSV/FSIO): pillar 3a limits and the buy-in rule in force from 2025, <a href="https://www.bsv.admin.ch/">bsv.admin.ch</a></li>
+<li>The third pillar, in English: <a href="https://www.ch.ch/en/retirement/third-pillar/">ch.ch</a></li>
+<li>Your own marginal rate: <a href="https://swisstaxcalculator.estv.admin.ch/">swisstaxcalculator.estv.admin.ch</a></li>
+</ul>
+
+</main>
+<footer>
+<p>Not advice. The figures are the federal rules as published for 2026 and the sources are linked on each page; your insurer, your bank, your canton and your commune have the last word. Nothing you type here leaves your browser.</p>
+<p>Made by Moneymind. · <a href="../">All calculators</a></p>
+</footer>
+<script>
+function chf(x){return 'CHF '+(Math.round(x*100)/100).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function num(el){var v=parseFloat(String(el.value).replace(/[’',\s]/g,''));return isFinite(v)&&v>0?v:0;}
+
+var $=function(i){return document.getElementById(i)},SMALL=7258,BIG=36288;
+function calc(){var pf=$('pf').value==='y';$('incw').style.display=pf?'none':'block';
+ var max=pf?SMALL:Math.min(num($('inc'))*0.2,BIG),paid=num($('paid')),rate=Math.min(num($('rate')),60)/100;
+ var left=Math.max(0,max-paid);
+ $('oM').textContent=chf(max);$('oL').textContent=chf(left);$('oS').textContent=chf(left*rate);$('oA').textContent=chf(max*rate);
+ var p25=$('p25').value.trim(),gap=0;
+ if(p25===''){$('rG').style.display='none'}else{$('rG').style.display='';gap=Math.min(Math.max(0,max-num($('p25'))),SMALL);$('oG').textContent=chf(gap)+' (saves about '+chf(gap*rate)+')';}
+ var now=new Date(),end=new Date(2026,11,31),d=Math.ceil((end-new Date(now.getFullYear(),now.getMonth(),now.getDate()))/864e5);
+ $('oD').textContent=d>=0?d:'the 2026 tax year is closed';
+ var v;
+ if(!pf&&max===0)v='Enter your net income from work to get your maximum.';
+ else if(paid>max+0.005)v='You have paid in '+chf(paid-max)+' more than the maximum. Tell your 3a provider: the excess is not deductible and has to be paid back to you.';
+ else if(left<0.005)v='2026 is full. Nothing more to pay in for this year'+(gap>0?'; the buy-in for 2025 is now open to you.':'.');
+ else if(d<0)v='What was not paid in by 31 December 2026 is lost for the 2026 tax year, apart from the buy-in rule for gaps.';
+ else v='Pay in '+chf(left)+' so that it is booked before 31 December and your tax bill falls by about '+chf(left*rate)+'. Send it by mid-December: the bank\'s cut-off is a few working days before Christmas.';
+ $('oV').textContent=v;
+ try{localStorage.setItem('s3a1',JSON.stringify({pf:$('pf').value,inc:$('inc').value,paid:$('paid').value,rate:$('rate').value,p25:$('p25').value}))}catch(e){}}
+try{var s=JSON.parse(localStorage.getItem('s3a1'));if(s){['pf','inc','paid','rate','p25'].forEach(function(k){if(s[k]!==undefined)$(k).value=s[k]})}}catch(e){}
+$('c').addEventListener('input',calc);$('pf').onchange=calc;calc();
+</script>
+</body>
+</html>

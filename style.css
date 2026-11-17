@@ -1,0 +1,53 @@
+:root{--red:#d52b1e;--ink:#1c1c1c;--mute:#666;--line:#e3e0da;--bg:#faf8f4;--card:#fff;--ok:#1d7a46;--warn:#b25c00}
+*{box-sizing:border-box}
+body{margin:0;font:17px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+header.top{border-bottom:1px solid var(--line);background:var(--card)}
+header.top div{max-width:760px;margin:0 auto;padding:12px 20px;display:flex;gap:10px;align-items:center}
+header.top a{color:var(--ink);text-decoration:none;font-weight:700}
+.cross{display:inline-block;width:22px;height:22px;background:var(--red);border-radius:4px;position:relative}
+.cross:before,.cross:after{content:"";position:absolute;background:#fff}
+.cross:before{left:9px;top:4px;width:4px;height:14px}.cross:after{left:4px;top:9px;width:14px;height:4px}
+main{max-width:760px;margin:0 auto;padding:8px 20px 60px}
+h1{font-size:1.9rem;line-height:1.2;margin:28px 0 10px}
+h2{font-size:1.3rem;margin:36px 0 8px}
+h3{font-size:1.05rem;margin:22px 0 6px}
+p.lead{font-size:1.12rem;color:#333}
+a{color:#0b5cad}
+.calc{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 18px 8px;margin:22px 0}
+.calc label{display:block;font-weight:600;margin:12px 0 4px;font-size:.95rem}
+.calc small,.hint{color:var(--mute);font-weight:400;font-size:.85rem}
+input[type=number],input[type=text],input[type=date],select{font:inherit;padding:8px 10px;border:1px solid #bbb;border-radius:6px;width:100%;max-width:260px;background:#fff}
+select{max-width:100%;width:auto}
+.row{display:flex;gap:8px;align-items:center;margin:6px 0}
+.row input[type=text]{flex:2;max-width:none}.row input[type=number]{flex:1;max-width:140px}
+.row label{margin:0;font-weight:400;font-size:.85rem;white-space:nowrap}
+button{font:inherit;padding:8px 14px;border:1px solid #999;border-radius:6px;background:#f2efe9;cursor:pointer}
+button.x{padding:4px 9px}
+.out{margin:16px -18px 0;padding:14px 18px;border-top:1px solid var(--line);background:#fffdf7;border-radius:0 0 10px 10px}
+.out table{width:100%;border-collapse:collapse}
+.out td{padding:5px 0;border-bottom:1px dotted var(--line)}
+.out td:last-child{text-align:right;font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
+.out tr.big td{font-size:1.15rem;border-bottom:0;padding-top:10px}
+.verdict{margin:12px 0 6px;padding:10px 12px;border-left:4px solid var(--red);background:#fff}
+.tpl{border:1px solid var(--line);border-left:4px solid var(--red);background:var(--card);border-radius:8px;padding:14px 18px;margin:28px 0}
+.tpl p{margin:6px 0}
+.btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;padding:9px 16px;border-radius:6px;font-weight:600;margin:6px 0}
+table.t{border-collapse:collapse;width:100%;margin:10px 0;font-size:.95rem}
+table.t th,table.t td{border:1px solid var(--line);padding:6px 9px;text-align:left;background:#fff}
+table.t th{background:#f2efe9}
+.phase{margin-top:26px}
+.task{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin:8px 0}
+.task.done{opacity:.55}
+.task summary{cursor:pointer;list-style:none;display:flex;gap:10px;align-items:flex-start}
+.task summary::-webkit-details-marker{display:none}
+.task .ti{flex:1;font-weight:600}
+.task .due{white-space:nowrap;font-size:.85rem;color:var(--mute);text-align:right}
+.task .how{margin:8px 0 2px 30px;font-size:.95rem}
+.badge{display:inline-block;font-size:.72rem;font-weight:700;border-radius:4px;padding:1px 6px;margin-left:6px;vertical-align:middle}
+.hard{background:#fde8e6;color:var(--red)}.late{color:var(--red);font-weight:700}.soon{color:var(--warn);font-weight:700}
+.checks label{display:inline-block;margin-right:16px;font-weight:400}
+footer{max-width:760px;margin:0 auto;padding:18px 20px 50px;color:var(--mute);font-size:.88rem;border-top:1px solid var(--line)}
+ul.cards{list-style:none;padding:0}
+ul.cards li{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin:12px 0}
+ul.cards a{font-weight:700;font-size:1.1rem}
+@media print{header.top,.tpl,.calc button,footer{display:none}.task .how{display:block}}

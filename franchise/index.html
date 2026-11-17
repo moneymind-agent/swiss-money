@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Franchise calculator: have I used up my Franchise, and what does the Krankenkasse owe me?</title>
+<meta name="description" content="Enter this year's medical bills and see how much of your Swiss health insurance Franchise and 10% Selbstbehalt is used, your share, and what the insurer still owes you. Free, runs in your browser.">
+<link rel="canonical" href="https://moneymind-agent.github.io/swiss-money/franchise/">
+<meta property="og:title" content="Franchise calculator: have I used up my Franchise, and what does the Krankenkasse owe me?">
+<meta property="og:description" content="Enter this year's medical bills and see how much of your Swiss health insurance Franchise and 10% Selbstbehalt is used, your share, and what the insurer still owes you. Free, runs in your browser.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://moneymind-agent.github.io/swiss-money/franchise/">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="top"><div><span class="cross"></span><a href="../">Swiss money &amp; admin, worked out</a></div></header>
+<main>
+
+<h1>Have I used up my Franchise? What the Krankenkasse still owes me</h1>
+<p class="lead">You paid the doctor, the lab and the pharmacy, some bills went to the insurer and some are still in a drawer. Type the year's bills in below and see three things: how much of your Franchise is used, what your own share is, and how much the insurer should have paid back by now.</p>
+
+<div class="calc" id="c">
+<label>Who is insured?</label>
+<select id="who"><option value="a">Adult (from the year you turn 19)</option><option value="c">Child (up to 18)</option></select>
+<label>Franchise chosen for this year <small>(it is on your policy)</small></label>
+<select id="fr"></select>
+<label>This year's bills <small>(amount in CHF; untick a bill that basic insurance does not cover, such as dental hygiene or glasses)</small></label>
+<div id="bills"></div>
+<p><button type="button" id="add">+ Add a bill</button> <button type="button" id="ex">Load an example</button> <button type="button" id="clr">Clear</button></p>
+<label>Already paid by the insurer for these bills <small>(paid back to you, or paid straight to the hospital or pharmacy)</small></label>
+<input type="number" id="back" min="0" step="0.05" inputmode="decimal" placeholder="0.00">
+<div class="out">
+<table>
+<tr><td>Covered bills this year</td><td id="oT"></td></tr>
+<tr><td>Franchise used</td><td id="oF"></td></tr>
+<tr><td>Selbstbehalt used (10% after the Franchise)</td><td id="oS"></td></tr>
+<tr><td>Your share of the covered bills</td><td id="oY"></td></tr>
+<tr><td>The insurer's share</td><td id="oI"></td></tr>
+<tr class="big"><td>Still owed to you by the insurer</td><td id="oO"></td></tr>
+<tr><td>The most you can still have to pay this year</td><td id="oW"></td></tr>
+<tr><td>Not covered by basic insurance (yours in full)</td><td id="oN"></td></tr>
+</table>
+<p class="verdict" id="oV"></p>
+</div>
+</div>
+
+<h2>How the calculation works</h2>
+<p>Basic health insurance (KVG/LAMal) splits every calendar year into three stretches:</p>
+<table class="t">
+<tr><th>Stretch</th><th>Who pays</th><th>Until</th></tr>
+<tr><td>1. Franchise</td><td>You pay 100% of the covered bills</td><td>the bills add up to your Franchise: CHF 300, 500, 1,000, 1,500, 2,000 or 2,500 for adults; CHF 0 to 600 for children</td></tr>
+<tr><td>2. Selbstbehalt (co-payment)</td><td>You pay 10%, the insurer 90%</td><td>your 10% adds up to CHF 700 in the year (CHF 350 for a child)</td></tr>
+<tr><td>3. After both</td><td>The insurer pays 100%</td><td>31 December; on 1 January everything starts again at zero</td></tr>
+</table>
+<p>So the most an adult with the CHF 300 Franchise pays in a year is CHF 1,000, and with the CHF 2,500 Franchise it is CHF 3,200, premiums not counted.</p>
+
+<h3>Example</h3>
+<p>Marc has the CHF 300 Franchise and five bills this year: 210.00, 164.80, 540.00, 122.60 and 432.00, together CHF 1,469.40. The first CHF 300 are his. Of the remaining 1,169.40 he pays 10%, CHF 116.94. His share is CHF 416.94 and the insurer's is CHF 1,052.46. The insurer has paid back CHF 553.32 so far, so CHF 499.14 is still owed to him: part of it for a bill he sent in and has no statement for, the rest for a bill he never sent. Press "Load an example" to see it.</p>
+
+<h2>Five things people get wrong</h2>
+<h3>A bill only counts once the insurer has seen it</h3>
+<p>If you pay the doctor yourself and keep the bill because "it is below the Franchise anyway", the insurer's count of your Franchise stays at zero. Send every bill in, even the small ones in January. Otherwise the expensive bill in October is charged against a Franchise you had in fact already used up.</p>
+<h3>The date of treatment decides the year, not the date of the bill</h3>
+<p>A treatment on 20 December counts toward this year's Franchise even if the bill arrives in February. A treatment on 3 January starts the new year's count.</p>
+<h3>You have time, but not for ever</h3>
+<p>The claim against the insurer lapses five years after the end of the month the treatment took place in. A bill found in a drawer two years later can still be sent in.</p>
+<h3>Some costs sit outside the count</h3>
+<p>A hospital stay costs CHF 15 a day on top (not for children, not for young adults in education, not for maternity). For a brand-name medicine where a cheaper generic exists, the Selbstbehalt is 40% instead of 10%. Maternity care from week 13 of pregnancy to eight weeks after the birth is free of Franchise and Selbstbehalt. This calculator leaves these three out.</p>
+<h3>Supplementary insurance is a different pot</h3>
+<p>Glasses, dental hygiene, the gym: these are never basic insurance. They do not use up the Franchise, and whether anything comes back depends on a supplementary policy (VVG), if you have one. Untick them above.</p>
+
+<h2>Should I change my Franchise for next year?</h2>
+<p>You can ask for a higher Franchise until 31 December and a lower one until 30 November, both for 1 January. As a rule of thumb: if your covered bills stay under about CHF 2,000 a year, the CHF 2,500 Franchise is cheaper overall because of the lower premium; above that, the CHF 300 one is. The middle steps rarely win. Compare your own premiums for both on <a href="https://www.priminfo.admin.ch/">priminfo.admin.ch</a>, the federal comparison without adverts.</p>
+
+<div class="tpl">
+<p><strong>Want this kept for the whole household, all year?</strong></p>
+<p>This page forgets everything when you close it. The Notion template keeps one list of bills for every person in the household, each with their own Franchise: what was sent in and when, which statements are still missing, what each person has left before the insurer pays, and what you are owed in total. It is the list to open when a bill arrives, and again in December when you decide about next year's Franchise.</p>
+<p><a class="btn" href="https://buy.polar.sh/polar_cl_UujRPT7WeRcafCgWrWGk9qGee7cbk8TWrLtPe0fSt74">Krankenkasse Franchise &amp; Claims Tracker · Notion template · USD 5</a></p>
+<p class="hint">One payment, no subscription. You get a link, click Duplicate, and it is yours in your own Notion (the free plan is enough).</p>
+</div>
+
+<h2>Sources</h2>
+<ul>
+<li>Federal Office of Public Health (BAG/FOPH): Franchise, Selbstbehalt and hospital contribution, <a href="https://www.bag.admin.ch/">bag.admin.ch</a></li>
+<li>Premiums and Franchise levels per insurer: <a href="https://www.priminfo.admin.ch/">priminfo.admin.ch</a></li>
+<li>Health insurance for residents, in English: <a href="https://www.ch.ch/en/insurance/health-insurance/">ch.ch</a></li>
+</ul>
+<p class="hint">A rise of the lowest Franchise from CHF 300 to CHF 400 has been proposed by the Federal Council; it is not in force for 2026 or 2027.</p>
+
+</main>
+<footer>
+<p>Not advice. The figures are the federal rules as published for 2026 and the sources are linked on each page; your insurer, your bank, your canton and your commune have the last word. Nothing you type here leaves your browser.</p>
+<p>Made by Moneymind. · <a href="../">All calculators</a></p>
+</footer>
+<script>
+function chf(x){return 'CHF '+(Math.round(x*100)/100).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function num(el){var v=parseFloat(String(el.value).replace(/[’',\s]/g,''));return isFinite(v)&&v>0?v:0;}
+
+var FR={a:[300,500,1000,1500,2000,2500],c:[0,100,200,300,400,500,600]},CAP={a:700,c:350};
+var $=function(i){return document.getElementById(i)};
+function fillFr(){var w=$('who').value;$('fr').innerHTML=FR[w].map(function(f){return '<option value="'+f+'">CHF '+f.toLocaleString('en-US')+'</option>'}).join('');}
+function addBill(label,amt,cov){var d=document.createElement('div');d.className='row';
+ d.innerHTML='<input type="text" placeholder="Doctor, lab, pharmacy ..." aria-label="Bill"><input type="number" min="0" step="0.05" inputmode="decimal" placeholder="0.00" aria-label="Amount in CHF"><label><input type="checkbox" checked> covered</label><button type="button" class="x" aria-label="Remove">×</button>';
+ var i=d.querySelectorAll('input');if(label)i[0].value=label;if(amt)i[1].value=amt;if(cov===false)i[2].checked=false;
+ d.querySelector('button').onclick=function(){d.remove();calc();save()};$('bills').appendChild(d);}
+function rows(){return Array.prototype.map.call($('bills').children,function(d){var i=d.querySelectorAll('input');return {l:i[0].value,a:num(i[1]),c:i[2].checked,raw:i[1].value}})}
+function calc(){var w=$('who').value,F=+$('fr').value,cap=CAP[w],T=0,N=0;
+ rows().forEach(function(r){if(r.c)T+=r.a;else N+=r.a});
+ var fr=Math.min(T,F),sb=Math.min((T-fr)*0.1,cap),you=fr+sb,ins=T-you,back=num($('back')),owed=Math.max(0,ins-back),worst=(F-fr)+(cap-sb);
+ $('oT').textContent=chf(T);$('oF').textContent=chf(fr)+' of '+F.toLocaleString('en-US');$('oS').textContent=chf(sb)+' of '+cap;
+ $('oY').textContent=chf(you);$('oI').textContent=chf(ins);$('oO').textContent=chf(owed);$('oW').textContent=chf(worst);$('oN').textContent=chf(N);
+ var v;
+ if(T===0)v='Enter your bills to see where you stand.';
+ else if(T<F)v='Your Franchise is not used up: the next '+chf(F-T)+' of covered bills are still yours. Send every bill in anyway, so that the insurer counts it.';
+ else if(sb<cap-0.005)v='Your Franchise is used up. From here the insurer pays 90% of each covered bill and you pay 10%, until your 10% has added up to another '+chf(cap-sb)+'.';
+ else v='Franchise and Selbstbehalt are both used up. For the rest of the calendar year the insurer pays covered bills in full (apart from CHF 15 per hospital day).';
+ if(back>ins+0.005)v+=' The insurer has paid more than this calculation gives: check whether a bill is missing from the list.';
+ else if(owed>0.005)v+=' The insurer still owes you '+chf(owed)+': check which bills you have not sent in and which statements are missing.';
+ $('oV').textContent=v;}
+function save(){try{localStorage.setItem('fr1',JSON.stringify({w:$('who').value,f:$('fr').value,b:$('back').value,r:rows()}))}catch(e){}}
+function load(s){$('who').value=s.w;fillFr();$('fr').value=s.f;$('back').value=s.b||'';$('bills').innerHTML='';(s.r||[]).forEach(function(r){addBill(r.l,r.raw,r.c)});}
+$('who').onchange=function(){fillFr();calc();save()};
+$('c').addEventListener('input',function(){calc();save()});
+$('add').onclick=function(){addBill()};
+$('clr').onclick=function(){load({w:'a',f:300,b:'',r:[{},{},{}]});calc();save()};
+$('ex').onclick=function(){load({w:'a',f:300,b:'553.32',r:[{l:'GP visit, flu',raw:'210.00',c:true},{l:'Blood test, lab',raw:'164.80',c:true},{l:'Orthopaedist',raw:'540.00',c:true},{l:'Pharmacy, prescription',raw:'122.60',c:true},{l:'Physiotherapy, 6 sessions',raw:'432.00',c:true},{l:'Dental hygiene',raw:'190.00',c:false}]});calc();save()};
+var s=null;try{s=JSON.parse(localStorage.getItem('fr1'))}catch(e){}
+if(s&&s.r&&s.r.length)load(s);else load({w:'a',f:300,b:'',r:[{},{},{}]});
+calc();
+</script>
+</body>
+</html>
